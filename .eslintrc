@@ -6,10 +6,10 @@
       "jsx": true
     }
   },
-  "plugins": ["prettier"],
+  # "plugins": ["prettier"],
   "rules": {
     "semi": 2,
-    "prettier/prettier": "error"
+    # "prettier/prettier": "error"
   },
   "env": {
     "browser": true
