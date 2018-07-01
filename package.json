@@ -2,16 +2,19 @@
   "name": "dnd-char-sheet",
   "version": "0.0.1",
   "description": "A DnD character sheet editor without all the restrictions",
-  "main": "index.js",
+  "main": "index.tsx",
   "repository": "git@github.com:znewton/dnd-char-sheet.git",
   "author": "znewton <znewton13@gmail.com>",
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "@types/react": "^16.4.6",
+    "@types/react-dom": "^16.0.6",
     "react": "^16.4.1",
     "react-dom": "^16.4.1"
   },
   "devDependencies": {
+    "awesome-typescript-loader": "^5.2.0",
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",
     "babel-preset-env": "^1.7.0",
@@ -20,7 +23,9 @@
     "css-loader": "^0.28.11",
     "eslint-plugin-prettier": "^2.6.1",
     "html-webpack-plugin": "^3.2.0",
+    "source-map-loader": "^0.2.3",
     "style-loader": "^0.21.0",
+    "typescript": "^2.9.2",
     "webpack": "^4.14.0",
     "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^3.1.4"
