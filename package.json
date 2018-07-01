@@ -1,0 +1,22 @@
+{
+  "name": "dnd-char-sheet",
+  "version": "0.0.1",
+  "description": "A DnD character sheet editor without all the restrictions",
+  "main": "index.js",
+  "repository": "git@github.com:znewton/dnd-char-sheet.git",
+  "author": "znewton <znewton13@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "css-loader": "^0.28.11",
+    "html-webpack-plugin": "^3.2.0",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.14.0",
+    "webpack-cli": "^3.0.8"
+  }
+}
