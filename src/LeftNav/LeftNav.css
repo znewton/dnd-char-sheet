@@ -1,0 +1,33 @@
+.LeftNav {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #413e3e;
+  width: 4rem;
+}
+
+.LeftNav__link {
+  color: #f1efef;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0 0.5rem;
+  width: 100%;
+  text-decoration: none;
+  font-size: 0.8rem;
+  line-height: 2rem;
+  transition: background-color 125ms ease;
+}
+
+.LeftNav__link:not(.LeftNav__link--active):hover {
+  background-color: #312e2e;
+}
+
+.LeftNav__link--active {
+  background-color: #211e1e;
+  cursor: default;
+}
