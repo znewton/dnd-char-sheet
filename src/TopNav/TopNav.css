@@ -1,0 +1,38 @@
+.TopNav {
+  display: flex;
+  height: 3rem;
+  border-bottom: 1px solid #dedee1;
+}
+
+.TopNav__right {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.TopNav__left {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.TopNav__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border: none;
+  padding: 0 1rem;
+  background: transparent;
+  transition: background-color 150ms ease;
+}
+.TopNav__button:hover {
+  cursor: pointer;
+  background-color: #eaeaef;
+}
+
+.TopNav__profile-label {
+  color: #6e6e71;
+  margin-right: 0.7rem;
+}

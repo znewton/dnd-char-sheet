@@ -4,12 +4,32 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: #413e3e;
+  background-color: #3e3e41;
   width: 4rem;
 }
 
+.LeftNav__brand {
+  position: relative;
+  color: #4e4e51;
+  background-color: transparent;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+}
+.LeftNav__brand::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  height: 1px;
+  width: 50%;
+  background-color: #4e4e51;
+  margin-bottom: 1px;
+}
+
 .LeftNav__link {
-  color: #f1efef;
+  color: #efeff1;
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -24,10 +44,10 @@
 }
 
 .LeftNav__link:not(.LeftNav__link--active):hover {
-  background-color: #312e2e;
+  background-color: #2e2e31;
 }
 
 .LeftNav__link--active {
-  background-color: #211e1e;
+  background-color: #1e1e21;
   cursor: default;
 }

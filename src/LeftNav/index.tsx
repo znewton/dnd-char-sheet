@@ -8,6 +8,7 @@ import {
   faChartPie,
   faBook,
   faMagic,
+  faBookOpen,
   IconDefinition,
 } from '@fortawesome/pro-solid-svg-icons';
 
@@ -36,6 +37,9 @@ export class LeftNav extends React.Component<LeftNavProps> {
   render() {
     return (
       <nav className="LeftNav">
+        <div className="LeftNav__brand">
+          <FontAwesomeIcon icon={faBookOpen} size="2x" />
+        </div>
         {this.links.map((link: Link) => (
           <NavLink
             exact
