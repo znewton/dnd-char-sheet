@@ -30,6 +30,7 @@
 
 .LeftNav__link {
   color: #efeff1;
+  position: relative;
   background-color: transparent;
   display: flex;
   flex-direction: column;
@@ -50,4 +51,23 @@
 .LeftNav__link--active {
   background-color: #1e1e21;
   cursor: default;
+}
+
+.LeftNav__link--active::after {
+  content: '';
+  position: absolute;
+  bottom: 0.5rem;
+  background-color: #ea0000;
+  height: 1px;
+  width: 25%;
+  animation: active_link_width_grow 250ms;
+}
+
+@keyframes active_link_width_grow {
+  from {
+    width: 0;
+  }
+  to {
+    width: 25%;
+  }
 }

@@ -3,53 +3,32 @@ import { NavLink } from 'react-router-dom';
 import './LeftNav.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  faHome,
-  faChartPie,
-  faBook,
-  faMagic,
-  faBookOpen,
-  IconDefinition,
-} from '@fortawesome/pro-solid-svg-icons';
+import { faBookOpen } from '@fortawesome/pro-solid-svg-icons';
 
-interface Link {
-  path: string;
-  label: string;
-  icon?: IconDefinition;
-}
+import { PageRoute } from 'App';
 
 export interface LeftNavProps {
   characterAvailable?: boolean;
+  pageRoutes: Array<PageRoute>;
 }
 
 export class LeftNav extends React.Component<LeftNavProps> {
-  links: Array<Link>;
-
-  constructor(props: LeftNavProps) {
-    super(props);
-    this.links = [
-      { path: '/', label: 'Home', icon: faHome },
-      { path: '/stats', label: 'Stats', icon: faChartPie },
-      { path: '/story', label: 'Story', icon: faBook },
-      { path: '/spells', label: 'Spells', icon: faMagic },
-    ];
-  }
   render() {
     return (
       <nav className="LeftNav">
         <div className="LeftNav__brand">
           <FontAwesomeIcon icon={faBookOpen} size="2x" />
         </div>
-        {this.links.map((link: Link) => (
+        {this.props.pageRoutes.map(({ label, path, icon }: PageRoute) => (
           <NavLink
             exact
-            key={link.label}
-            to={link.path}
+            key={label}
+            to={path}
             className="LeftNav__link"
             activeClassName="LeftNav__link--active"
           >
-            {link.icon ? <FontAwesomeIcon icon={link.icon} size="2x" /> : null}
-            <span>{link.label}</span>
+            {icon ? <FontAwesomeIcon icon={icon} size="2x" /> : null}
+            <span>{label}</span>
           </NavLink>
         ))}
       </nav>
