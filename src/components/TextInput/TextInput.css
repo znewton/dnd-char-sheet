@@ -1,0 +1,45 @@
+.TextInput {
+  background-color: #fefeff;
+  padding: 0.5rem;
+  min-height: 4rem;
+  display: flex;
+}
+
+.TextInput__input {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  border-bottom: 1px solid #8e8e91;
+  width: 100%;
+}
+.TextInput__input:focus {
+  border-bottom-color: #4e4e51;
+  outline: none;
+}
+
+.TextInput__label {
+  color: #8e8e91;
+  font-size: 0.75rem;
+  margin-left: 0.1rem;
+}
+
+.TextInput__input:focus + .TextInput__label {
+  color: #4e4e51;
+}
+
+.TextInputLabelPosition--Left,
+.TextInputLabelPosition--Right {
+  flex-direction: row;
+  align-items: center;
+}
+.TextInputLabelPosition--Left .TextInput__label {
+  order: -1;
+}
+.TextInputLabelPosition--Top,
+.TextInputLabelPosition--Bottom {
+  flex-direction: column;
+  justify-content: center;
+}
+.TextInputLabelPosition--Top .TextInput__label {
+  order: -1;
+}

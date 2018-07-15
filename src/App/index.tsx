@@ -43,7 +43,7 @@ export class App extends React.Component {
           <TopNav />
           <div className="App__route-pane">
             {this.pageRoutes.map(({ path, component, isExact = false }: PageRoute) => (
-              <Route exact={isExact} path={path} component={component} />
+              <Route key={path} exact={isExact} path={path} component={component} />
             ))}
           </div>
         </div>

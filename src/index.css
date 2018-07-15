@@ -17,6 +17,10 @@ body {
   background-color: #fafafe;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 button,
 a {
   font-family: inherit;
