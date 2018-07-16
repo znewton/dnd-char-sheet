@@ -8,7 +8,7 @@ export class ClassNameBuilder {
   }
 
   add(className: string, condition: boolean = true) {
-    if (condition) {
+    if (className && condition) {
       this.classNames.push(className);
     }
   }

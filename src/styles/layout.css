@@ -8,10 +8,10 @@
   flex-direction: column;
 }
 
-.l-flex-vertical-center {
+.l-flex-align-center {
   align-items: center;
 }
 
-.l-flex-horizontal-center {
+.l-flex-justify-center {
   justify-content: center;
 }

@@ -12,10 +12,13 @@ export enum TextInputLabelPosition {
 }
 
 export interface TextInputProps {
-  value?: string;
-  initialValue?: string;
-  onChange?: TextInputChangeHandler;
   label: string;
+
+  value?: string | number;
+  className?: string;
+  initialValue?: string | number;
+  onChange?: TextInputChangeHandler;
+  name?: string;
   type?: string;
   hint?: string | React.ReactElement<any>;
   style?: React.CSSProperties;
@@ -26,10 +29,11 @@ export interface TextInputProps {
 
   inputProps?: any;
   labelProps?: any;
+  children?: React.ReactChild | React.ReactChildren;
 }
 
 export interface TextInputState {
-  value: string;
+  value: string | number;
 }
 
 export class TextInput extends React.Component<TextInputProps, TextInputState> {
@@ -45,9 +49,10 @@ export class TextInput extends React.Component<TextInputProps, TextInputState> {
   }
 
   render() {
-    const inputName = this.props.label.replace(' ', '_').toLowerCase();
+    const inputName = this.props.name || this.props.label.replace(' ', '_').toLowerCase();
     const cnb = new ClassNameBuilder('TextInput');
     cnb.add(`TextInputLabelPosition--${this.props.labelPosition || TextInputLabelPosition.BOTTOM}`);
+    cnb.add(this.props.className);
 
     return (
       <div className={cnb.className} style={this.props.style}>
@@ -71,6 +76,7 @@ export class TextInput extends React.Component<TextInputProps, TextInputState> {
         >
           {this.props.label}
         </label>
+        {this.props.children}
       </div>
     );
   }
